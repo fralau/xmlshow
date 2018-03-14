@@ -62,3 +62,5 @@ Beside the usual commands, remember that:
  - `w`jumps one window backward
  - **`h` calls a help, with plenty of good features you may not have suspected (use q to quit)**
  - To search for a pattern just type `/pattern`
+
+It is also worth remembering that it is often easy to display more characters at once, either by getting a smaller font on your terminal pane (on MacOS: `CMD -`, `CMD 0` to get to normal), or by increasing the size of the window or pane!
