@@ -29,7 +29,11 @@ Just type:
     $ xmlshow <filename>
     
 <img src="Demo.gif" />
-    
+
+It will also read from stdin if no argument is provided. Hence if some utility outputs some well-form XML on stdout, you can pipe it into xml show:
+
+    $ some-utility | xmlshow
+
 ## How it works
 It combines:
 
@@ -60,6 +64,7 @@ That's all there is to it: it's just a typical shell hack with Unix pipes, suffi
  
 ## Tips
 
+### Navigating the file
 The [less](https://ss64.com/bash/less.html) utility has actually quite a few tricks up its sleeves.
 
 Beside the usual commands, remember that:
@@ -69,4 +74,12 @@ Beside the usual commands, remember that:
  - **`h` calls a help, with plenty of good features you may not have suspected (use q to quit)**
  - To search for a pattern just type `/pattern`
 
-It is also worth remembering that it is often easy to display more characters at once, either by getting a smaller font on your terminal pane (on MacOS: `CMD -`, `CMD 0` to get to normal), or by increasing the size of the window or pane!
+### Viewing more text
+It is also worth remembering that it is often easy to display more text at once, either by getting a smaller font on your terminal pane (on MacOS: `CMD -`, `CMD 0` to get to normal), or by increasing the size of the window or pane!
+
+### Consulting the XML content of a docx document
+Since you can use xmlshow in a pipe, you can do something like this:
+
+    unzip -p myfile.docx word/document.xml | xmlshow
+    
+It tells unzip to decompress the document.xml file and to send it to stdout, ready to be piped into xmlshow.
