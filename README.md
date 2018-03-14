@@ -21,6 +21,7 @@ There are two things, however, that it won't do:
 
 ### Usage
 Just type:
+
     $ xmlshow <filename>
     
 ## How it works
