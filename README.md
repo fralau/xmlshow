@@ -3,7 +3,7 @@
 ## Introduction
 
 ### Features
-xmlshow is a super-simple XML viewer for the command line, which should provide most everything you could wish,
+xmlshow is a super-simple XML viewer for the Unix command line, which should provide most everything you could wish,
 since uses the features of [less](https://ss64.com/bash/less.html).
 
   - It will display any **large** XML file in a breeze.
@@ -28,17 +28,21 @@ Just type:
 It combines:
 
   - unzip, to extract the file
+  - file to check the mime type of the input file
   - [xmllint](http://xmlsoft.org/xmllint.html), for beautifying the XML.
   - highlight to highlight the syntax
   - [less](https://ss64.com/bash/less.html) to view the file
     
-That's all there is to it. It's just a hack with *Nix pipes.
+That's all there is to it: it's just a typical shell hack with Unix pipes, sufficiently long to warrant a script file, and sufficiently useful to be put on git.
 
 ## How to install it
 
   1. Download the .sh file an install it some directory in your path (type `echo $PATH`to find out).
   2. Make it executable: `chmod +x xmlshow.sh`
   2. In that same directory, create a soft link: `ln -s xmlshow.sh xmlshow`
+  3. If it fails, make sure that utilities mentioned above (typically xmllint and highlight) are installed on your system. If not use your favorite package manager
+     - On Debian, `apt get install`
+     - On MacOs, `brew install` is your friend (see [instructions to install brew](https://brew.sh/))
 
 *Voilà*, you should be all set.
  
