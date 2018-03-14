@@ -37,6 +37,7 @@ That's all there is to it. It's just a hack with *Nix pipes.
 ## How to install it
 
   1. Download the .sh file an install it some directory in your path (type `echo $PATH`to find out).
+  2. Make it executable: `chmod +x xmlshow.sh`
   2. In that same directory, create a soft link: `ln -s xmlshow.sh xmlshow`
 
 *Voilà*, you should be all set.
