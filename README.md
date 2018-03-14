@@ -33,7 +33,7 @@ It combines:
   - highlight to highlight the syntax
   - [less](https://ss64.com/bash/less.html) to view the file
     
-That's all there is to it: it's just a typical shell hack with Unix pipes, sufficiently long to warrant a script file, and sufficiently useful to be put on git.
+That's all there is to it: it's just a typical shell hack with Unix pipes, sufficiently long to warrant a script file, and sufficiently useful to be put on github.
 
 ## How to install it
 
