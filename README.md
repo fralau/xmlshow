@@ -24,6 +24,8 @@ Just type:
 
     $ xmlshow <filename>
     
+<img src="Demo.gif" />
+    
 ## How it works
 It combines:
 
