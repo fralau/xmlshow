@@ -3,11 +3,24 @@
 #
 # Copyright (c) 2018 Laurent Franceschetti, MIT License
 #
+# usage:
+#    xmlshow myfile.xml
+#    xmlshow myfile.zip
+#    program-outputting-xml | xmlshow
 
 # in case you need to change the format, see -out-format in highlight:
 OUT_FORMAT=xterm256
 
-filename=$1
+
+if [ $# = 0 ]
+then
+    # no arguments: use stdin
+    filename=/dev/stdin
+else
+    # file to read
+    filename=$1
+fi
+
 remove=false
 
 
