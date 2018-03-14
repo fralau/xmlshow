@@ -2,6 +2,10 @@
 
 ## Introduction
 
+Ever found yourself with an XML file just too large for your editor or your browser, and did you (like me) try to find a simple solution? This one may be for you.
+
+And if it isn't, you may have found enough material to create your own.
+
 ### Features
 xmlshow is a super-simple XML viewer for the Unix command line, which should provide most everything you could wish,
 since uses the features of [less](https://ss64.com/bash/less.html).
