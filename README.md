@@ -37,7 +37,13 @@ It combines:
   - file to check the mime type of the input file
   - [xmllint](http://xmlsoft.org/xmllint.html), for beautifying the XML.
   - highlight to highlight the syntax
-  - [less](https://ss64.com/bash/less.html) to view the file
+  - [less](https://ss64.com/bash/less.html) to view the file and add the line numbers.
+  
+ The script does it for you, but this is the substance:
+ 
+     xmllint --format <yourfile> | highlight --syntax=xml --out-format=xterm-256 | less -R -N
+     
+ (the `-R` parameter in `less` is for raw (i.e. to preserve the escape codes for colors), and `-N` is for numbering)
     
 That's all there is to it: it's just a typical shell hack with Unix pipes, sufficiently long to warrant a script file, and sufficiently useful to be put on github.
 
