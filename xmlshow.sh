@@ -41,8 +41,14 @@ then
     remove=true
 fi
 
-# Beautify, highlight with colors and send to less
-xmllint --format "$filename" | highlight --syntax=xml --out-format=$OUT_FORMAT | less -R -N
+# Beautify, highlight syntax with colors and send to less for display
+# xmllint:
+#     --format  : beautify the output
+#     --recover : allows the process to continue even on a non-compliant file.
+# less:
+#     -R : raw output (preserver color escape sequences)
+#     -N : line numbering
+xmllint --format "$filename" --recover | highlight --syntax=xml --out-format=$OUT_FORMAT | less -R -N
 
 # remove the filename
 if $remove
